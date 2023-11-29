@@ -12,8 +12,8 @@ test("Count = 0", async ({ page }) => {
 test("click work", async ({ page }) => {
   await page.goto('http://localhost:5173/')
 
-  await page.getByRole('button').click()
-  await page.getByRole('button').click()
+  await page.click('button')
+  await page.click('button')
 
   const countValue = await page.innerText('button')
 
